@@ -24,6 +24,5 @@ export default defineConfig({
     url: 'http://localhost:3000/health',
     reuseExistingServer: false,
     timeout: 30000,
-    readyTimeout: 30000,
   },
 });
