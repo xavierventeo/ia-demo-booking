@@ -26,4 +26,6 @@ A **backend API** for offering bookings for rocket launches.
 
 # Chat 2
 
-Smoke test with Playwright and commit changes with conventional message
+1.- Smoke test with Playwright and commit changes with conventional message
+
+2.- Fix the problem in playwright.config.ts with the parameter readyTimeout in the webServer definition
