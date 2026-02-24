@@ -1,0 +1,8 @@
+
+> ia-demo-booking@0.1.0 test
+> npm run build && playwright test
+
+
+> ia-demo-booking@0.1.0 build
+> tsc -p tsconfig.json
+
