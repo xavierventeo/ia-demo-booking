@@ -14,3 +14,16 @@ A **backend API** for offering bookings for rocket launches.
 
 - Customers are billed upon booking, and payments are processed through a mock gateway.
 
+# Demo prompts using Agent mode with Copilot
+
+# Chat 1
+
+1.- Create at root folder a Node app with Typescript modern bare-bone setup
+
+2.- Create at root folder a Node app with Typescript modern bare-bone setup
+
+3.- Add a recent version Express to write an API with a health status endpoint
+
+# Chat 2
+
+Smoke test with Playwright and commit changes with conventional message
