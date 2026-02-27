@@ -6,6 +6,11 @@ export const rocketsRouter = Router();
 
 rocketsRouter.get("/", (req, res) => {
   const result = rocketService.list();
+
+  if (!result.ok) {
+    return res.status(500).json({ error: "internal_error" });
+  }
+
   res.status(200).json({ items: result.value });
 });
 
