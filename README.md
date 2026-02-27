@@ -116,6 +116,74 @@ Input validation happens at the service layer before data persistence, ensuring:
 3. Register the router in `src/app.ts`
 4. Add e2e tests in `tests/{feature}.spec.ts`
 
+## Vibe Coding Process
+
+This project uses AI-assisted development with structured prompts to guide implementation from specification to release.
+
+### Specification Foundation
+
+**[specs/rockets.spec.md](specs/rockets.spec.md)** is the single source of truth for the Rocket Management API feature.
+
+#### Content & Purpose
+
+The specification defines requirements across three dimensions:
+
+1. **Problem Description** - User stories from three perspectives:
+   - Operations manager: Manage rocket records for booking accuracy
+   - Booking agent: View rocket details for customer matching
+   - System integrator: Validate inputs for downstream reliability
+
+2. **Solution Overview** - Architectural approach across three layers:
+   - **Application**: CRUD endpoints with consistent JSON responses
+   - **Logic**: Field validation, enum constraints, capacity limits, clear error messages
+   - **Infrastructure**: In-memory storage with standard logging (ready for database upgrade)
+
+3. **Acceptance Criteria** - 9 testable scenarios in Gherkin format:
+   - **Happy path**: Create rockets, list, retrieve by ID, update, delete
+   - **Validation**: Reject missing name, invalid range, invalid capacity
+   - **Error handling**: Return 404 for non-existent rockets
+   - **Data integrity**: Persist changes and confirm operations
+
+#### Purpose in Development
+
+- **Blueprint**: Guides implementation of [src/modules/rockets/](src/modules/rockets/)
+- **Test Coverage**: Each acceptance criterion maps to e2e tests in [tests/rockets.spec.ts](tests/rockets.spec.ts)
+- **Quality Gate**: Release checklist verifies all scenarios pass before deployment
+
+### Prompt-Driven Workflow
+
+Starting from [specs/rockets.spec.md](specs/rockets.spec.md), the development process uses three complementary prompts:
+
+1. **[prompts/rockets.spec.prompt.md](prompts/rockets.spec.prompt.md)** - Specification Generation
+   - Converts requirements into detailed specifications
+   - Uses Gherkin format for acceptance criteria
+   - Output: `specs/rockets.spec.md`
+
+2. **[prompts/rockets.code.prompt.md](prompts/rockets.code.prompt.md)** - Implementation
+   - Generates modular code following architectural patterns
+   - Creates typed layers: types, validation, store, service, router
+   - Output: Feature modules under `src/modules/`
+
+3. **[prompts/rockets.release.prompt.md](prompts/rockets.release.prompt.md)** - Release Management
+   - Verifies implementation with e2e tests
+   - Updates documentation and version numbers
+   - Creates git tags and manages merges
+   - Output: Versioned release on `main` branch
+
+### Development Cycle
+
+```
+Requirements
+    ↓
+[spec.prompt] → specs/{feature}.spec.md
+    ↓
+[code.prompt] → src/modules/{feature}/
+    ↓
+[release.prompt] → tests + docs + git tag
+    ↓
+v{version} deployed to main
+```
+
 ## API Response Format
 
 ### Success Response
