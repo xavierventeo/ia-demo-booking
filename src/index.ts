@@ -1,8 +1,11 @@
 import { createApp } from "./app.js";
-const PORT = process.env.PORT || 3000;
+
+const DEFAULT_PORT = 3000 as const;
+const portFromEnv = Number.parseInt(process.env.PORT ?? "", 10);
+const port = Number.isFinite(portFromEnv) ? portFromEnv : DEFAULT_PORT;
 
 const app = createApp();
 
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+app.listen(port, () => {
+  console.log(`Server running on http://localhost:${port}`);
 });
