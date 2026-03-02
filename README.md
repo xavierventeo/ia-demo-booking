@@ -2,6 +2,8 @@
 
 A **backend API** for managing and booking rocket launches.
 
+This is an application created for Github Copilot training purposes.
+
 ## Features
 
 ### Rocket Management API (v0.2.0+)
@@ -169,6 +171,12 @@ Starting from [specs/rockets.spec.md](specs/rockets.spec.md), the development pr
    - Updates documentation and version numbers
    - Creates git tags and manages merges
    - Output: Versioned release on `main` branch
+
+4. **[.agents/prompts/create-agents.prompt.md](.agents/prompts/create-agents.prompt.md)** - AI Agent Instructions
+   - Generates project documentation for AI agents
+   - Summarizes tech stack, workflow, and folder structure
+   - Provides concise reference for AI-assisted development
+   - Output: `AGENTS.md` at project root
 
 ### Development Cycle
 
