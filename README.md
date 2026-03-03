@@ -2,7 +2,7 @@
 
 A **backend API** for managing and booking rocket launches.
 
-This is an application created for Github Copilot training purposes.
+This application was created with GitHub Copilot for training purposes.
 
 ## Features
 
