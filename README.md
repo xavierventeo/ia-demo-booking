@@ -178,6 +178,16 @@ Starting from [specs/rockets.spec.md](specs/rockets.spec.md), the development pr
    - Provides concise reference for AI-assisted development
    - Output: `AGENTS.md` at project root
 
+### AI Agent Skills
+
+Skills extend AI agent capabilities for specific tasks:
+
+- **[.github/skills/commit-changes/SKILL.md](.github/skills/commit-changes/SKILL.md)** - Commit Management
+  - Handles staging and committing code changes
+  - Follows [conventional commits](https://www.conventionalcommits.org/) format
+  - Supports grouping related changes and meaningful commit messages
+  - Reference: [.github/skills/commit-changes/conventional-commits.md](.github/skills/commit-changes/conventional-commits.md)
+
 ### Development Cycle
 
 ```
