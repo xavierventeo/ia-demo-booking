@@ -2,7 +2,7 @@
 
 A **backend API** for managing and booking rocket launches.
 
-This application was created with GitHub Copilot for training purposes.
+This application was created with GitHub Copilot for training purposes on how to apply Generative AI in SDLC and understand concepts as Pronpts, Instructions, Agents and Skillss.
 
 ## Features
 
