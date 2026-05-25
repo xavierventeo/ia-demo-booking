@@ -86,7 +86,8 @@ specs/
 tests/
 ├── health.spec.ts        # Health endpoint tests
 └── rockets.spec.ts       # Rocket API e2e tests
-prompts/
+
+.github/prompts/
 ├── rockets.spec.prompt.md   # Specification generation prompt
 ├── rockets.code.prompt.md   # Implementation prompt
 └── rockets.release.prompt.md # Release checklist prompt
@@ -156,23 +157,23 @@ The specification defines requirements across three dimensions:
 
 Starting from [specs/rockets.spec.md](specs/rockets.spec.md), the development process uses three complementary prompts:
 
-1. **[prompts/rockets.spec.prompt.md](prompts/rockets.spec.prompt.md)** - Specification Generation
+1. **[.github/prompts/rockets.spec.prompt.md](.github/prompts/rockets.spec.prompt.md)** - Specification Generation
    - Converts requirements into detailed specifications
    - Uses Gherkin format for acceptance criteria
    - Output: `specs/rockets.spec.md`
 
-2. **[prompts/rockets.code.prompt.md](prompts/rockets.code.prompt.md)** - Implementation
+2. **[.github/prompts/rockets.code.prompt.md](.github/prompts/rockets.code.prompt.md)** - Implementation
    - Generates modular code following architectural patterns
    - Creates typed layers: types, validation, store, service, router
    - Output: Feature modules under `src/modules/`
 
-3. **[prompts/rockets.release.prompt.md](prompts/rockets.release.prompt.md)** - Release Management
+3. **[.github/prompts/rockets.release.prompt.md](.github/prompts/rockets.release.prompt.md)** - Release Management
    - Verifies implementation with e2e tests
    - Updates documentation and version numbers
    - Creates git tags and manages merges
    - Output: Versioned release on `main` branch
 
-4. **[.agents/prompts/create-agents.prompt.md](.agents/prompts/create-agents.prompt.md)** - AI Agent Instructions
+4. **[.github/prompts/create-agents.prompt.md](.github/prompts/create-agents.prompt.md)** - AI Agent Instructions
    - Generates project documentation for AI agents
    - Summarizes tech stack, workflow, and folder structure
    - Provides concise reference for AI-assisted development
